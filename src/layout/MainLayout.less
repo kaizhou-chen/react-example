@@ -1,0 +1,42 @@
+.ux-head {
+  z-index: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  padding: 0 20px;
+  background-color: #fff;
+  align-items: center;
+
+  .logo-text {
+    font-weight: bold; 
+    display: inline-block; 
+    line-height: 45px;
+    margin-left: 12px;
+    width: 145px;
+
+    font-size: 16px;
+  }
+}
+
+.ux-center {
+  background-color: rgb(240, 242, 245);
+  padding: 20px;
+}
+
+.ux-main {
+  min-height: calc(100vh - 154px);
+  overflow: auto;
+  text-align: left;
+}
+
+.ux-plain .ux-main {
+  min-height: calc(100vh - 105px);
+  min-width: 100%;
+
+  display: flex;
+  overflow: visible;
+
+  > div:first-child {
+    flex: 1;
+  }
+}
