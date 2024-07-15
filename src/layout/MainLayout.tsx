@@ -41,7 +41,7 @@ const MainLayout: React.FC = () => {
       <Header className='ux-head'>
         <div style={{ display: 'inline-flex' }}>
           <img src={logo} style={{width: '45px', height: '45px'}} />
-          <div className="logo-text">React 学习笔记</div>
+          <div className="logo-text">React Example</div>
         </div>
         <div style={{alignSelf: 'end', paddingBottom: '12px'}}>
           <LayoutBreadcrumb></LayoutBreadcrumb>

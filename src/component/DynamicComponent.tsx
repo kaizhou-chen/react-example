@@ -6,7 +6,7 @@ const components = import.meta.glob('@/pages/**/*.tsx');
 const importComponent = (componentName): any => {
   const keys = Object.keys(components)
   const path = keys.find(x => x.indexOf(componentName + '.tsx') >= 0)
-  // 如果组件存在，则导入它
+  // 如果组件存在，则导入
   if (path) {
     return components[path];
   }

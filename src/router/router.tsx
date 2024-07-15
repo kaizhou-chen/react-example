@@ -9,7 +9,6 @@ import DynamicComponent from '@/component/DynamicComponent';
 // 使用 lazy 懒加载组件
 const MainLayout = lazy(() => import('@/layout/MainLayout'))
 
-
 const routes = [
   {
     path: "/",
@@ -102,6 +101,7 @@ const routes = [
 const base = import.meta.env.VITE_BASE_PATH;
 
 // 创建 hash 路由，不要设置 basename
+// https://stackoverflow.com/questions/72815638/react-router-dom-v6-hashrouter-basename-not-working
 const router = createHashRouter(routes)
 
 // 创建 history 路由，需要设置 basename
