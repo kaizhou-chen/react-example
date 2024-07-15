@@ -1,0 +1,21 @@
+.code-font {
+  tab-size: 2;
+  font-size: 17px;
+  font-family: Consolas, 'Courier New', monospace;
+}
+
+.redux-tool {
+  :global(textarea) {
+    height: calc(100vh - 220px) !important;
+
+    .code-font();
+  }
+
+  :global(.ux-state) {
+    height: calc(100vh - 275px) !important;
+  }
+
+  :global(.ant-form-item) {
+    margin-bottom: 0px;
+  }
+}
