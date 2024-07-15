@@ -1,7 +1,7 @@
 
 import { Suspense, lazy } from 'react'
 import { Skeleton } from 'antd';
-import { createHashRouter } from 'react-router-dom'
+import { createHashRouter, createBrowserRouter } from 'react-router-dom'
 
 // 懒加载的动态组件
 import DynamicComponent from '@/component/DynamicComponent';
@@ -101,7 +101,10 @@ const routes = [
 // 项目的 base
 const base = import.meta.env.VITE_BASE_PATH;
 
-// 创建 hash 路由，并设置 basename
-const router = createHashRouter(routes, { basename: base })
+// 创建 hash 路由，不要设置 basename
+const router = createHashRouter(routes)
+
+// 创建 history 路由，需要设置 basename
+// createBrowserRouter(routes, { basename: base })
 
 export default router;
