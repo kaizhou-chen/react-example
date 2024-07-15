@@ -1,0 +1,1 @@
+import{j as e,B as r,e as t}from"./index.A5_RCYys.2024-07-15_11.00.50.js";function o(){return e.jsx(r,{children:e.jsx("div",{children:"这是登录页面"})})}t.createRoot(document.getElementById("root")).render(e.jsx(o,{}));
