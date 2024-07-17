@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Outlet, useLocation } from 'react-router-dom'
 import { Layout, Card } from 'antd';
 
 import LayoutMenu from './LayoutMenu';
 import LayoutBreadcrumb from './LayoutBreadcrumb';
+
+import { MyContext } from '@/utils/context';
 
 /** 样式、图片，使用 import 导入 */
 import './MainLayout.less'
@@ -28,6 +30,7 @@ function ContentWrap(props: any) {
 
 const MainLayout: React.FC = () => {
   const { pathname } = useLocation()
+  const str = useContext(MyContext)
 
   const [ plain, setPlain ] = useState(false)
 
@@ -35,6 +38,12 @@ const MainLayout: React.FC = () => {
     const isPlain = plainPage.some(x => x === pathname)
     setPlain(isPlain)
   }, [pathname])
+
+  useEffect(() => {
+    console.log('my context value', str)
+
+    console.log('logo', logo)
+  }, [])
 
   return (
     <Layout>

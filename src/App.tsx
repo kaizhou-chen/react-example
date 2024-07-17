@@ -8,6 +8,8 @@ import zhCN from 'antd/locale/zh_CN';
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 
+import { MyProvider } from './utils/context'
+
 function App() {
   const [locale, setLocale] = useState(zhCN)
 
@@ -16,9 +18,11 @@ function App() {
   }, [])
 
   return (
-    <ConfigProvider locale={locale}>
-      <RouterProvider router={router}></RouterProvider>
-    </ConfigProvider>
+    <MyProvider value={'abc'}>
+      <ConfigProvider locale={locale}>
+        <RouterProvider router={router}></RouterProvider>
+      </ConfigProvider>
+    </MyProvider>
   )
 }
 
