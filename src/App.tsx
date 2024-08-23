@@ -19,6 +19,7 @@ function App() {
 
   return (
     <MyProvider value={'abc'}>
+      { /** 国际化 */ }
       <ConfigProvider locale={locale}>
         <RouterProvider router={router}></RouterProvider>
       </ConfigProvider>
