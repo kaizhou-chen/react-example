@@ -1,1 +1,0 @@
-import{j as e,B as r,f as t}from"./index.BrOU8kF2.2024-07-17_13.07.26.js";function o(){return e.jsx(r,{children:e.jsx("div",{children:"这是登录页面"})})}t.createRoot(document.getElementById("root")).render(e.jsx(o,{}));
