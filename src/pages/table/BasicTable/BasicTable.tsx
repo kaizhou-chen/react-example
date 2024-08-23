@@ -167,7 +167,7 @@ interface DataType {
 }
 
 const getColumns = (actionRender: any) => {
-  const columns: TableProps<DataType>['columns'] = [
+  const columns: TableProps<any>['columns'] = [
     {
       title: '活动名称',
       dataIndex: 'name',
