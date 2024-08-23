@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Button, Modal, Segmented, Card, Table, Form, notification } from 'antd';
-import type { TableProps } from 'antd';
+import type { TableColumnsType, TableProps } from 'antd';
 import { PlusOutlined, DeleteOutlined } from '@ant-design/icons'
 
 import { sendRequest } from "@/utils/httpUtil";
@@ -34,10 +34,10 @@ export default function BasicTable() {
   const { list, loading, tableProps, submit, reset } = useSimpleTable(simpleTableProps, form)
 
   const rowSelection = {
-    onChange: (selectedRowKeys: React.Key[], selectedRows: DataType[]) => {
+    onChange: (selectedRowKeys: React.Key[], selectedRows: any[]) => {
       setSelectedRows(selectedRows)
     },
-    getCheckboxProps: (record: DataType) => ({
+    getCheckboxProps: (record: any) => ({
       name: record.id,
     }),
   };
@@ -167,7 +167,23 @@ interface DataType {
 }
 
 const getColumns = (actionRender: any) => {
-  const columns: TableProps<any>['columns'] = [
+  // const columns: TableProps<any>['columns'] = [
+  const columns: TableColumnsType<any> = [
+    {
+      title: '操作',
+      key: 'action',
+      render: actionRender,
+    },
+    {
+      title: '开始时间',
+      dataIndex: 'beginDate',
+      key: 'beginDate',
+    },
+    {
+      title: '结束时间',
+      dataIndex: 'endDate',
+      key: 'endDate',
+    },
     {
       title: '活动名称',
       dataIndex: 'name',
