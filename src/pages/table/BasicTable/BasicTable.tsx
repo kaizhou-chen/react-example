@@ -170,21 +170,6 @@ const getColumns = (actionRender: any) => {
   // const columns: TableProps<any>['columns'] = [
   const columns: TableColumnsType<any> = [
     {
-      title: '操作',
-      key: 'action',
-      render: actionRender,
-    },
-    {
-      title: '开始时间',
-      dataIndex: 'beginDate',
-      key: 'beginDate',
-    },
-    {
-      title: '结束时间',
-      dataIndex: 'endDate',
-      key: 'endDate',
-    },
-    {
       title: '活动名称',
       dataIndex: 'name',
       key: 'name',
