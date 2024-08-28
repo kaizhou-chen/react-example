@@ -1,0 +1,1 @@
+import{j as e,B as r,f as t}from"./index.DuhVyv5o.2024-08-28_12.18.25.js";function o(){return e.jsx(r,{children:e.jsx("div",{children:"这是登录页面"})})}t.createRoot(document.getElementById("root")).render(e.jsx(o,{}));
