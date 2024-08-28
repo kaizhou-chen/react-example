@@ -56,10 +56,6 @@ const MainLayout: React.FC = () => {
         <div style={{ alignSelf: 'end', paddingBottom: '12px' }}>
           <LayoutBreadcrumb></LayoutBreadcrumb>
         </div>
-        <div style={{ alignSelf: 'end', paddingBottom: '12px', marginLeft: 'auto', display: 'inline-flex' }}>
-          <NavLink text="Github" url="https://github.com/kaizhou-chen/react-example"></NavLink>
-          <NavLink text="我的博客" url="https://kaizhou-chen.github.io/docsify-blog/"></NavLink>
-        </div>
       </Header>
 
       <Layout>
